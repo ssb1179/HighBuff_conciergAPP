@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     //밑으로 버튼 설정
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.highbuff">
+<uses-permission android:name="android.permission.INTERNET"
+    />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Highbuff"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+
+
+        <!-- 웹뷰 오류가 뜨면 android:usesCleartextTraffic="true"를 추가해주면 된다
+              액티비티도 추가를 해줘야지 인식을하고 실행된다
+              activity태그안에 android:name=".WebViewActivity"를 주어 액티비티 추가를 해줘야지 실행됨-->
+
+        <activity android:name=".WebViewActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ligth_Activity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".aircon_Activity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".car_Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

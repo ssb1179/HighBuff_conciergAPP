@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/leftIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ligth_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ligth_icon"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/ligth_allOn_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/HBColor"
+                    android:text="전체점등"
+                    android:textSize="29dp"
+                    android:layout_marginHorizontal="@dimen/size5dp" />
+
+                <Button
+                    android:id="@+id/ligth_allOff_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/HBColor"
+                    android:text="전체소등"
+                    android:textSize="29dp"
+                    android:layout_marginHorizontal="@dimen/size5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/size50dp"
+        android:layout_toRightOf="@+id/leftIcon"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size40dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/size100dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="거실"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/ligth_living_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+            </ToggleButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/size100dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="안방"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/ligth_bed_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"></ToggleButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/size100dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="방"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/ligth_room_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"></ToggleButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/size50dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/size100dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="부엌"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/ligth_kitchen_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"></ToggleButton>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

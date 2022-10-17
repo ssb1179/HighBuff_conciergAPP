@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/leftIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size5dp"
+                    android:backgroundTint="@color/HBColor"
+                    android:text="냉방"
+                    android:textSize="29dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size5dp"
+                    android:backgroundTint="@color/HBColor"
+                    android:text="난방"
+                    android:textSize="29dp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/aircon_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+
+                app:srcCompat="@drawable/aircon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/aircon_allOn_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size5dp"
+                    android:text="전체켜기"
+                    android:textSize="29dp"
+                    android:backgroundTint="@color/HBColor"
+                    />
+
+                <Button
+
+                    android:id="@+id/aircon_allOff_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size5dp"
+                    android:text="전체끄기"
+                    android:textSize="29dp"
+                    android:backgroundTint="@color/HBColor"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/size50dp"
+        android:layout_toRightOf="@+id/leftIcon"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="@dimen/size40dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="거실"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_living_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="17º"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_living_UP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▲"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_living_DOWN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▼"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/aircon_living_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size125dp"
+                android:layout_gravity="center_vertical"></ToggleButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="안방"
+                android:textSize="40pt"></TextView>
+
+
+            <TextView
+                android:id="@+id/aircon_bed_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="17º"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_bed_UP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▲"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_bed_DOWN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▼"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/aircon_bed_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size125dp"
+                android:layout_gravity="center_vertical">>
+            </ToggleButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="방"
+                android:textSize="40pt"></TextView>
+
+
+            <TextView
+                android:id="@+id/aircon_room_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="17º"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_room_UP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▲"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_room_DOWN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▼"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/aircon_room_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size125dp"
+                android:layout_gravity="center_vertical"></ToggleButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/size50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="부엌"
+                android:textSize="40pt"></TextView>
+
+
+            <TextView
+                android:id="@+id/aricon_kitchen_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="17º"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_kitchen_UP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▲"
+                android:textSize="40pt"></TextView>
+
+            <TextView
+                android:id="@+id/aircon_kitchen_DOWN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/tableborder"
+                android:paddingHorizontal="@dimen/size10dp"
+                android:text="▼"
+                android:textSize="40pt"></TextView>
+
+            <ToggleButton
+                android:id="@+id/aircon_kitchen_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size125dp"
+                android:layout_gravity="center_vertical"></ToggleButton>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
